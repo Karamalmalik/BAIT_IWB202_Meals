@@ -1,0 +1,410 @@
+
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FCE4EC 0%, #FFF3E0 100%);
+    min-height: 100vh;
+    direction: rtl;
+    line-height: 1.6;
+    color: #5D4037;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// راس الصفحة
+header {
+    background: linear-gradient(135deg, #F48FB1, #F06292);
+    box-shadow: 0 2px 15px rgba(233, 30, 99, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    color: white;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+}
+
+/* ========== قائمة التنقل (Navbar) ========== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #c2185b;
+font-weight:bold;
+    padding: 5px 12px;
+}
+
+nav ul li a.active {
+   // font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ========== الأقسام العامة ========== */
+section {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(233, 30, 99, 0.08);
+    border: 1px solid #F8BBD0;
+}
+
+section h2 {
+    color: #E91E63;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #F9A825;
+    display: inline-block;
+    font-size: 24px;
+}
+
+/* ========== قسم الترحيب ========== */
+.welcome {
+    text-align: center;
+    background: linear-gradient(135deg, #FCE4EC, #FFF3E0);
+    color: #5D4037;
+    border: none;
+}
+
+.welcome h2 {
+    color: #E91E63;
+    border-bottom-color: #F9A825;
+}
+
+.welcome p {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #8D6E63;
+}
+
+/* ========== الجداول ========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+th, td {
+    border: 1px solid #F8BBD0;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(135deg, #F48FB1, #F06292);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background: #FFF8F9;
+}
+
+tr:hover {
+    background: #FCE4EC;
+    transition: all 0.3s ease;
+}
+
+/* جدول الطلاب */
+.students-table {
+    border: 2px solid #F9A825;
+    border-radius: 15px;
+}
+
+.students-table th {
+    background: linear-gradient(135deg, #F9A825, #F48FB1);
+}
+
+/* ========== الأزرار ========== */
+button, .btn, .details-btn, .btn-primary, #submit-btn, #cancel-btn {
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.details-btn {
+    background: linear-gradient(135deg, #F9A825, #F48FB1);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+.details-btn:hover {
+    background: linear-gradient(135deg, #F48FB1, #E91E63);
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #F9A825, #F48FB1);
+    padding: 12px 40px;
+    font-size: 18px;
+    border-radius: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #F48FB1, #E91E63);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+}
+
+#submit-btn {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    padding: 10px 30px;
+    border-radius: 25px;
+    color: white;
+}
+
+#submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
+}
+
+#cancel-btn {
+    background: linear-gradient(135deg, #EF5350, #E57373);
+    padding: 10px 30px;
+    border-radius: 25px;
+    color: white;
+}
+
+#cancel-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* زر متابعة */
+.checkout-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* ========== نموذج الطلب ========== */
+.order-form {
+    background: linear-gradient(135deg, #FFF3E0, #FCE4EC);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.1);
+    border: 1px solid #F8BBD0;
+}
+
+.order-form h3 {
+    color: #E91E63;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5D4037;
+}
+
+.required {
+    color: #E91E63;
+    font-size: 12px;
+}
+
+.optional {
+    color: #F9A825;
+    font-size: 12px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #F8BBD0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #E91E63;
+    box-shadow: 0 0 8px rgba(233, 30, 99, 0.2);
+}
+
+.error-msg {
+    color: #E91E63;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ========== تفاصيل الوجبات ========== */
+.meal-details {
+    background: #FFF8E1;
+    padding: 15px;
+    text-align: right;
+    border-radius: 15px;
+    border-right: 4px solid #F9A825;
+}
+
+.meal-details p {
+    margin: 8px 0;
+    color: #5D4037;
+}
+
+.meal-details strong {
+    color: #E91E63;
+}
+
+// تنسيق معلومات التةواصل
+.contact-card {
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid #C2185B;  /* حدود زهرية فقط */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.features-list {
+    list-style: none;
+    padding-right: 20px;
+}
+
+.features-list li {
+    margin: 12px 0;
+    padding-right: 30px;
+    position: relative;
+    color: #5D4037;
+}
+
+.features-list li:before {
+    
+    color: #E91E63;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+}
+
+//ملاحظات
+.notes ul {
+    list-style: none;
+    padding-right: 20px;
+}
+
+.notes ul li {
+    margin: 10px 0;
+    padding-right: 25px;
+    position: relative;
+    color: #5D4037;
+}
+
+.notes ul li:before {
+    content: "✓";
+    color: #F9A825;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+}
+
+//رابط النشر
+.publish-link a {
+    color: #E91E63;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    background: #FCE4EC;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.publish-link a:hover {
+    background: #F9A825;
+    color: white;
+    text-decoration: none;
+}
+
+
+footer {
+    background: linear-gradient(135deg, #F48FB1, #F06292);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-radius: 30px 30px 0 0;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+//تنسيق الشاشات الصغيرة
+@media (max-width: 768px) {
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li a {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+    
+    header h1 {
+        font-size: 22px;
+    }
+    
+    section h2 {
+        font-size: 20px;
+    }
+    
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    .btn-primary {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}

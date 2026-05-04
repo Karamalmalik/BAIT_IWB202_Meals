@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المطعم البحري | الوجبات</title>
+    <link rel="stylesheet" href="style.css">
+    
+  //تضمين الملفات
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="javascript.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>مطعم الأمواج البحرية</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">الرئيسية</a></li>
+                    <li><a href="aboutus.html">من نحن</a></li>
+                    <li><a href="meals.html" class="active">الوجبات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="meals-section">
+            <h2>قائمة الوجبات</h2>
+            
+            <div style="overflow-x: auto;">
+                <table id="meals-table" class="meals-table">
+                    <thead>
+                        <tr>
+                            <th>الرمز</th>
+                            <th>الوجبة</th>
+                            <th>السعر (ل.س)</th>
+                            <th>إظهار التفاصيل</th>
+                            <th>اختيار</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     
+                        <tr id="row-SF-001" data-id="SF-001">
+                            <td>SF-001</td>
+                            <td>سمك بوري مشوي لشخصين</td>
+                            <td>110,000</td>
+                            <td><input type="checkbox" class="details-checkbox" data-id="SF-001"></td>
+                            <td><input type="checkbox" class="meal-check" data-id="SF-001" data-name="سمك بوري مشوي لشخصين" data-price="110000"></td>
+                        </tr>
+                        
+                        
+                        <tr id="row-SF-002" data-id="SF-002">
+                            <td>SF-002</td>
+                            <td>جمبري مشوي مع صلصة الليمون</td>
+                            <td>85,000</td>
+                            <td><input type="checkbox" class="details-checkbox" data-id="SF-002"></td>
+                            <td><input type="checkbox" class="meal-check" data-id="SF-002" data-name="جمبري مشوي مع صلصة الليمون" data-price="85000"></td>
+                        </tr>
+                        
+                        
+                        <tr id="row-SF-003" data-id="SF-003">
+                            <td>SF-003</td>
+                            <td>كاليماري مقلي مع صوص التارتار</td>
+                            <td>65,000</td>
+                            <td><input type="checkbox" class="details-checkbox" data-id="SF-003"></td>
+                            <td><input type="checkbox" class="meal-check" data-id="SF-003" data-name="كاليماري مقلي مع صوص التارتار" data-price="65000"></td>
+                        </tr>
+                        
+                        
+                        <tr id="row-SF-004" data-id="SF-004">
+                            <td>SF-004</td>
+                            <td>سمك هامور مشوي على الفحم</td>
+                            <td>135,000</td>
+                            <td><input type="checkbox" class="details-checkbox" data-id="SF-004"></td>
+                            <td><input type="checkbox" class="meal-check" data-id="SF-004" data-name="سمك هامور مشوي على الفحم" data-price="135000"></td>
+                        </tr>
+                        
+                       
+                        <tr id="row-SF-005" data-id="SF-005">
+                            <td>SF-005</td>
+                            <td>طاجن سمك بالخضار</td>
+                            <td>75,000</td>
+                            <td><input type="checkbox" class="details-checkbox" data-id="SF-005"></td>
+                            <td><input type="checkbox" class="meal-check" data-id="SF-005" data-name="طاجن سمك بالخضار" data-price="75000"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="checkout-container">
+                <button id="checkout-btn" class="btn-primary">متابعة</button>
+            </div>
+
+            <div id="order-form" class="order-form" style="display: none;">
+                <h3>معلومات الطلب</h3>
+                <form id="customer-form">
+                    <div class="form-group">
+                        <label>الاسم الكامل <span class="optional">(اختياري - أحرف عربية فقط)</span></label>
+                        <input type="text" id="fullname" placeholder="مثال:دعاء">
+                        <span class="error-msg" id="fullname-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>الرقم الوطني <span class="required">*إجباري</span> (11 خانة فقط)</label>
+                        <input type="text" id="national-id" maxlength="11" placeholder="مثال: 01234567890">
+                        <span class="error-msg" id="national-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>تاريخ الميلاد <span class="optional">(اختياري - يوم-شهر-سنة)</span></label>
+                        <input type="text" id="vdob" placeholder="مثال: 15-08-1990">
+                        <span class="error-msg" id="vdob-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>رقم الموبايل <span class="optional">(اختياري - يبدأ بـ 093/094/095/096)</span></label>
+                        <input type="text" id="mobile" placeholder="مثال: 0931234567">
+                        <span class="error-msg" id="mobile-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>الإيميل <span class="optional">(اختياري)</span></label>
+                        <input type="email" id="email" placeholder="example@domain.com">
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" id="submit-btn">إرسال</button>
+                        <button type="button" id="cancel-btn">إلغاء</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+  
+</body>
+</html>
